@@ -44,8 +44,14 @@ export const redux = {
   doSearch: 'DO_SEARCH',
 };
 
-export const localRoutes = {
+export const constants = {
+  jwtSecret: process.env.JWT_SECRET,
+  twilioAuthToken: process.env.TWILIO_AUTH_TOKEN,
+  twilioAccountSID: process.env.TWILIO_ACCOUNT_SID,
+  twilioPhoneNumber: process.env.TWILIO_PHONE_NUMBER,
+};
 
+export const localRoutes = {
   dashboard: '/dashboard',
   contacts: '/people/contacts',
   profile: '/people/contacts/me',
@@ -85,7 +91,7 @@ export const localRoutes = {
   reportCategories: '/admin/report-categories',
   groupsCategories: '/admin/group-categories',
   eventCategories: '/admin/event-categories',
-
+  communications: '/admin/communications',
 };
 
 const isDevelopmentMode = process.env.NODE_ENV !== 'production';
@@ -147,5 +153,4 @@ export const remoteRoutes = {
   chat: `${apiBaseUrl}/api/chat/email`,
   eventsRegistration: `${apiBaseUrl}/api/events/registration`,
   help: `${apiBaseUrl}/api/help`,
-
 };
